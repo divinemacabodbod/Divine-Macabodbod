@@ -2,7 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\UserController;
 
-Route::get('/user', function (Request $request) {
-    return "Testing, I've been here";
-});
+// CRUD API Routes for Users
+Route::apiResource('users', UserController::class);
